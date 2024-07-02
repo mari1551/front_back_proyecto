@@ -191,7 +191,7 @@ footer .container > div {
   font-size: 1.6rem;
   justify-content: space-evenly;
 }
-#footer_detalles p{
+#footer_detalles p {
   margin-bottom: 0;
 }
 
@@ -378,6 +378,118 @@ footer .container > div {
   line-height: 0.8rem;
 }
 
+/* ****************************** PAG. ACTIVIDADES *************************** */
+#titulo-actividades {
+  color: #000000;
+  text-align: center;
+  font-family: var(--titulo-font);
+  font-size: 4em;
+  font-weight: 600;
+}
+.Actividades {
+  padding-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(245, 247, 250);
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 250px;
+  margin: 20px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotate(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.Actividades.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.front p {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(16, 117, 9, 0.4);
+  text-align: center;
+}
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(44, 52, 57);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: 1px solid #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+.Actividades a {
+  background: none !important;
+}
+
 /* ****************************** PAG. CONTACTO *************************** */
 #section_imagen_titulo2 {
   width: 100%;
@@ -452,45 +564,8 @@ input.button {
 .contacto .inline {
   color: white;
 }
-.error{
-  color:rgb(121, 28, 28);
-}
-/* ****************************** PAG. ACTIVIDADES *************************** */
-#titulo-actividades {
-  color: #000000;
-  padding-top: 1.5em;
-  text-align: center;
-  font-family: var(--titulo-font);
-  font-size: 4em;
-  font-weight: 600;
-}
-.Actividades {
-  background-color: var(--fifth-color);
-  width: 100%;
-}
-.excursiones{
-  width: 100%;
-  margin:0 auto;
-  display: flex;
-  justify-content: center;  
-}
-.gridExcursiones{
-  width: 90%;
-}
-.row{
-  width: 100%;
-}
-.card{
-  height: 100%;
-}
-.Actividades a{
-  padding: 0.2em;
-  border-radius: 10%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #000000;
-  background-color: #dbdbdb;
-  border: 1px solid black;
+.error {
+  color: rgb(121, 28, 28);
 }
 
 /* ****************************** PAG. DESTINOS (MOBILE) *************************** */
@@ -537,15 +612,15 @@ input.button {
 .tarjeta_destino {
   width: 90%;
   -webkit-box-shadow: 2px 1px 10px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 1px 10px 0 rgba(0, 0, 0, 0.2);  
+  box-shadow: 2px 1px 10px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 1.5rem;
   background-color: var(--bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.imagen_tarjeta_destino{
-  width:100%;
+.imagen_tarjeta_destino {
+  width: 100%;
 }
 .imagen_tarjeta_destino img {
   width: 100%;
@@ -553,7 +628,7 @@ input.button {
 }
 .texto_tarjeta_destino {
   padding: 10px;
-  width:100%;
+  width: 100%;
 }
 .texto_tarjeta_destino h2 {
   font-family: var(--titulo-font);
@@ -568,15 +643,15 @@ input.button {
   background-color: var(--fifth-color);
   border-radius: 5%;
 }
-.iframe_destino{
+.iframe_destino {
   /* display:none; */
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 }
-.iframe_destino iframe{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+.iframe_destino iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 /************************************ MEDIA QUERIES **************************************/
@@ -584,15 +659,15 @@ input.button {
   /* tablet */
 
   /* ----------- FOOTER (tablet) ------- */
-  footer{
+  footer {
     padding-top: 15px;
   }
-  #div_footer_logo{
-    width:40%;
+  #div_footer_logo {
+    width: 40%;
     height: 200px;
   }
-  #div_footer_menu{
-    width:60%;
+  #div_footer_menu {
+    width: 60%;
     height: 200px;
     align-items: center;
   }
@@ -616,15 +691,15 @@ input.button {
   /* -- section redes sociales (tablet) -- */
   #section_rs {
     padding: 0;
-  } 
+  }
   .fotos_rs {
-    display:flex;
+    display: flex;
     width: 45%;
     height: 100%;
     margin-bottom: 0;
     padding: 0;
   }
-  .fotos_rs > img{
+  .fotos_rs > img {
     width: 100%;
     height: 100%;
   }
@@ -668,8 +743,8 @@ input.button {
     width: 90%;
     display: flex;
   }
-  .imagen_tarjeta_destino{
-    width:50%;
+  .imagen_tarjeta_destino {
+    width: 50%;
     height: 30vw;
   }
   .imagen_tarjeta_destino img {
@@ -686,13 +761,13 @@ input.button {
   .texto_tarjeta_destino p {
     font-size: 2.5vh;
   }
-  .iframe_destino{
-    width:50%;
+  .iframe_destino {
+    width: 50%;
     /* padding: 10px; */
     height: 30vw;
     display: block;
   }
-  .iframe_destino iframe{
+  .iframe_destino iframe {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -740,7 +815,9 @@ input.button {
     border-bottom: 0.1rem solid var(--bg-color);
     padding-top: 1rem;
   }
-  #div_footer_logo, #div_footer_menu, #div_footer_rs {
+  #div_footer_logo,
+  #div_footer_menu,
+  #div_footer_rs {
     margin-bottom: 1rem;
     padding: 0.5rem;
     width: 30%;
@@ -820,7 +897,7 @@ input.button {
   }
   .texto_rs #logo_rs {
     font-size: 1.5rem;
-    width:80%;
+    width: 80%;
   }
 
   /* ------- SECTION 5: OPINIONES (pantallas grandes) -----------*/
@@ -879,23 +956,115 @@ input.button {
 
   /* ------------- ******* PAG. ACTIVIDADES  (pantalla grande) ******* ----------*/
   /* Actividades */
+
+  .Actividades {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(245, 247, 250);
+  }
   #titulo-actividades {
-    font-size: 5.5em;
+    text-align:start;
+    padding-right: 1.5em;
+    font-size: 6em;
   }
-  .Actividades{
-    /* padding-left: 1em; */
+  .animacTit {
+  padding: 0.5em;
   }
-  .card{
-    /* height: 480px; */
+ 
+  .card {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 20px;
+  }
+
+  .card .face {
+    position: absolute;
+    width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
   }
 
-  .excursiones article{
-    box-shadow: #20252d;
+  .card .front {
+    transform: perspective(600px) rotate(0deg);
+    box-shadow: 0 5px 10px #000;
   }
 
-  /* ************* PAG. DESTINOS (pantallas grandes) **************** */
-  #section_destinos_imagen_principal {
-    background-image: url(../img/chicamapa.jpg);
+  .Actividades.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  .front p {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(16, 117, 9, 0.4);
+    text-align: center;
+  }
+
+  .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(44, 52, 57);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+  }
+
+  .card .back .link {
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .card .back .link a {
+    color: #f3f3f3;
+  }
+
+  .card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+
+  .card .back p {
+    letter-spacing: 1px;
+  }
+
+  .card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+  }
+
+  .card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+  }
+  .Actividades a {
+    background: none !important;
   }
 }
