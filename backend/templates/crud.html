@@ -34,6 +34,7 @@
         <a href="../../frontend/index.html">Home</a>
         <a href="../../frontend/pages/destinos.html">Destinos</a>
         <a href="../../frontend/pages/actividades.html">Actividades</a>
+        <a href="#">Reservar</a>
         <a href="../../frontend/pages/contacto.html">Contacto</a>
       </nav>
     </section>   
@@ -41,7 +42,7 @@
     
   <!-- *************************************** CUERPO PRINCIPAL MAIN ***************************************-->
   <main>
-
+    <section class="reservas">
     <section id="form" class="container ">
       <h2 class="search-title">Gestión de Reservaciones</h2>
       <p class="description" >En esta sección se podra llevar a cabo la gestión de las reservaciones</p>
@@ -70,13 +71,13 @@
               
               </div>                
               <input type="hidden"  name="id" id="id-reserva">
-              <button class="btn-cac" type="button" id="btn-save-reserva">Guardar reserva</button>
+              <button class="btn-guardar" type="button" id="btn-save-reserva">Guardar reserva</button>
           </div>
       </form> 
   </section>
 
-  <section id="list" class="container">
-      <h3 class="subtitle">Listado de reservaciones</h3>
+  <section id="list" class="container2">
+      <h3 class="sub-reserva">Listado de reservaciones</h3>
       <table id="list-table-reservaciones" class="table">
           <thead>
               <tr>
@@ -93,7 +94,7 @@
           </tbody>
       </table>
   </section>  
-   
+</section>
 
     
     
@@ -101,7 +102,7 @@
 
   <!--*************************************** FOOTER ***************************************-->
   <footer>
-    <!-- <section class="container">
+   <section class="container">
       <div class="logo" id="div_footer_logo">
         <a href="../../frontend/index.html"><img id="footer_logo" src="../../frontend/static/img/logo.jpg
           " alt="Logo"></a>
@@ -120,7 +121,7 @@
         <a href="https://twitter.com/home?lang=es" target="_blank"><i class="fa-brands fa-x-twitter"></i> </a>
         <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i> </a>      
       </div>
-    </section> -->
+    </section> 
     <div id="footer_detalles">
       <p>Copyright ©2024 LGM Hotels International, Inc.</p>
     </div>      

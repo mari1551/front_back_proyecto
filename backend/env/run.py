@@ -26,6 +26,6 @@ app.route('/api/reservaciones/<int:id_reserva>', methods=['PUT'])(update_reserva
 app.route('/api/reservaciones/<int:id_reserva>', methods=['DELETE'])(delete_reserva)
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='app.log', level=logging.DEBUG)
+#    logging.basicConfig(filename='app.log', level=logging.DEBUG)
     app.run(debug=True)
     
